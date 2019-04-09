@@ -1,3 +1,9 @@
-<p>
-  product works!
-</p>
+<div class="container" *ngIf="product else ShowLoading">
+  <p>
+    {{ product | json }}
+  </p>
+</div>
+
+<ng-template #ShowLoading>
+  <h1>Loading</h1>
+</ng-template>

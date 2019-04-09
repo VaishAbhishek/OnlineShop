@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Third party imports
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 // Component Imports
@@ -20,6 +20,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AdminComponent } from './page/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,14 @@ import { HeaderComponent } from './components/header/header.component';
     ProductComponent,
     SearchComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase,'myapp'),
-    AngularFireDatabaseModule,
+    AngularFirestoreModule,
     AngularFireAuthModule,
     NgbModule
   ],

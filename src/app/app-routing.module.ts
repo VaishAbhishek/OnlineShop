@@ -5,13 +5,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ProductComponent } from './pages/product/product.component';
+import { AdminComponent } from './page/admin/admin.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: RegisterComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'product', component: ProductComponent },
+  { path: 'product/:pid', component: ProductComponent },
+  { path: 'admin', component: AdminComponent },
   { path: '**', redirectTo: '/home'}
 ];
 
