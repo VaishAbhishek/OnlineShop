@@ -14,7 +14,7 @@ export class ProductComponent implements OnInit {
     private dataService: DataService) { }
 
   product;
-
+  date = new Date();
   ngOnInit() {
     this.dataService.getProduct(this.route.snapshot.paramMap.get('pid')).subscribe(productdoc => {
       this.product = productdoc;

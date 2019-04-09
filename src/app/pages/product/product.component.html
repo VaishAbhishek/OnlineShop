@@ -1,6 +1,7 @@
 <div class="container" *ngIf="product else ShowLoading">
   <p>
-    {{ product | json }}
+    <!-- {{ product | json }} -->
+    {{ date | date:"M-d-yy" }}
   </p>
 </div>
 
